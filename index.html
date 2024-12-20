@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <h1>Editable Resume Builder</h1> 
+        <form id="resumeform">
+            <fieldset>
+                <legend>username</legend>
+                <input type="text" id="username" placeholder="username" required><br><br>
+                
+                <legend>Personal Information</legend><br>
+                <label for="photo">Upload Photo</label>
+                <input type="file" id="photo" name="photo" required>
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </fieldset>
+            <fieldset>
+                <legend>Education</legend>
+                <label for="degree">Degree:</label>
+                <input type="text" id="degree" name="degree" required>
+                <label for="education">School:</label>
+                <input type="text" id="education" name="education" required>
+            </fieldset>
+            <fieldset>
+                <legend>Work Experience</legend>
+                <label for="experience">Experience</label>
+                <textarea id="experience" name="experience" required></textarea><br>
+            </fieldset>       
+            <fieldset>
+                <legend>Skills</legend>
+                <label for="skills">Skills</label>
+                <textarea id="skills" name="skills" required></textarea><br>
+            </fieldset>  
+            <button id="submit">Generate Resume Below</button>
+        </form>
+    </div>
+    <div id="resumeOutput" class="resume-Output hidden">
+        <div id="resumeContent" class="resume-Content">
+            <img id="resumePhoto" class="resumePhoto" src="" alt="photo">
+            <h1 id="Name"></h1>
+            <p id="Email"></p>
+            <p id="Phone"></p>
+            <h2>Education</h2>
+            <p id="Education"></p>
+            <h2>Work Experience</h2>
+            <p id="WorkExperience"></p>
+            <h2>Skills</h2>
+            <p id="Skills"></p>
+        </div>
+        <button id="editButton">Edit</button>
+        <button id="backButton" onclick="window.location.href='index.html'">Back to Form</button> 
+       
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
